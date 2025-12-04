@@ -1,0 +1,7 @@
+<a {{ $attributes->merge(['class' => 'group flex items-center gap-3 w-full px-4 py-3 text-start text-sm font-medium leading-5 text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-900/30 dark:hover:to-purple-900/30 hover:text-blue-700 dark:hover:text-blue-300 focus:outline-none focus:bg-gradient-to-r focus:from-blue-50 focus:to-purple-50 dark:focus:from-blue-900/30 dark:focus:to-purple-900/30 transition-all duration-200 ease-in-out border-l-4 border-transparent hover:border-blue-500 dark:hover:border-blue-400']) }}>
+    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-700 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 transition-colors duration-200">
+        <i class="fa-solid fa-circle-dot text-xs text-gray-400 dark:text-gray-500 group-hover:text-blue-600 dark:group-hover:text-blue-400"></i>
+    </span>
+    <span class="flex-1">{{ $slot }}</span>
+    <i class="fa-solid fa-chevron-right text-xs text-gray-400 dark:text-gray-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all duration-200"></i>
+</a>
