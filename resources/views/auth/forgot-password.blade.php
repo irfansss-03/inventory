@@ -12,7 +12,8 @@
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
+                autofocus />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
@@ -22,4 +23,12 @@
             </x-primary-button>
         </div>
     </form>
+
+    <!-- Back to Login -->
+    <div class="mt-6 text-center">
+        <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+            href="{{ route('login') }}">
+            &larr; {{ __('Back to Login') }}
+        </a>
+    </div>
 </x-guest-layout>
