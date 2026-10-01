@@ -34,8 +34,10 @@ class SearchableBarangTable extends Component
 
         // Search
         if ($this->search) {
-            $query->where('nama', 'like', '%' . $this->search . '%')
+            $query->where(function ($q) {
+                $q->where('nama', 'like', '%' . $this->search . '%')
                   ->orWhere('kategori', 'like', '%' . $this->search . '%');
+            });
         }
 
         // Category Filter

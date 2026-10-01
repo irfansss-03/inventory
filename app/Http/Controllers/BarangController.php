@@ -22,8 +22,10 @@ class BarangController extends Controller
 
         if ($request->has('search')) {
             $search = $request->input('search');
-            $query->where('nama', 'like', "%{$search}%")
+            $query->where(function ($q) use ($search) {
+                $q->where('nama', 'like', "%{$search}%")
                   ->orWhere('kategori', 'like', "%{$search}%");
+            });
         }
 
         $barangs = $query->latest()->paginate(5)->withQueryString();
